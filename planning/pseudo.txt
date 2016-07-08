@@ -1,0 +1,22 @@
+//html & css: Make heading with Simon as title, Make instructions as paragraph, Make Four colored quarter circle divs in the center of the page. Divs have class names which include a number 0-3
+//on document ready
+//score = 0
+//while not gameover
+
+  //generate a random number between 0 and 3 and put it at the end of an array.
+  //for loop start
+    //access the numbers in the array and access the divs associated with those numbers.
+    //Change the css to a brighter color for a set time (.5 to 1 sec)
+    //Change the css of that div back to its original color.
+    //Wait a set time (.5 to 1 sec)
+    //Iterate over the next array item until reached array length
+  //for loop start
+    //user must click on a div
+    //div that user clicks changes to the brighter color on mousedown and reverts on mouse up
+    //if userChoice != div associated with the number in the array position
+      //gameover == true
+      //break
+    //Iterate until reached array length
+  //score++
+
+//show Highscore heading and change html to score

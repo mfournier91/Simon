@@ -1,0 +1,21 @@
+Project 1: Simon
+Timeline:
+		Friday: User stories, wire framing, pseudocode, mkdir touch index.html, script.js, style.css, readme, git init,
+		Saturday: Make a visual representation of the game.
+		Sunday: Game logic
+		Monday: Game logic
+		Tuesday: Debug, refactor, addn’l feature
+		Wednesday: Deliverable, reassess.
+
+	User Stories: (1 = bronze; 2 = silver; 3 = gold)
+As a player, I want the game board which consists of a circular “toy” with four colored “buttons” to load upon opening the page so I know when it’s time to play.(1)
+	I want the game to highlight color(s) at random and check if I click the same color(s), so I can know if I clicked the correct color.(1)
+	I want the game to progress in difficulty if I win a turn such that one random color is added per turn, so that I must incrementally remember one more color each turn.(1)
+	If I am unsuccessful, I want the game to inform me how many turns I passed so I can judge how well I did.(1)
+	I want a start button, so that the game doesn’t start testing my memory unless I ask it to(2).
+	If I am unsuccessful, I want the option to play again so I can try to improve.(2)
+	If I am unsuccessful, I want to see my high score so I can see when I improve(2)
+	I want a more visually striking board with animations, one that looks like the buttons are being pressed, so I can have a sense of realism(3)
+	I want sounds to play while the buttons are being clicked so I have another way to memorize patterns(3)
+	I want my score to reflect how quickly I was able to pass a level and for each score addition to be relative to both time and the number of colors I had to remember, so I can work on both memory and speed(3)
+	I want my high score to be preserved when I leave the page so I don’t need to keep my browser open to try to improve.(3)
