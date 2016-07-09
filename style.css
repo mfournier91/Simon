@@ -23,6 +23,14 @@ h1 {
   color: rgba(223,218,215,.75);
 }
 
+p{
+  background: black;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  margin-bottom: 30px;
+  color:#39ff14;
+}
+
 #row1, #row2 {
   display: flex;
   flex-direction: row;
