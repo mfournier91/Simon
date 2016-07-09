@@ -49,21 +49,21 @@ p{
 }
 
 #color0 {
-  background: #00cd57;
+  background: #00a157;
   border-radius: 100% 0 0;
 }
 
 #color1 {
-  background: #fd000a;
+  background: #a8000a;
   border-radius: 0 100% 0 0;
 }
 
 #color2 {
-  background: #f2c301;
+  background: #f2b001;
   border-radius: 0 0 0 100%;
 }
 
 #color3 {
-  background: #0164ca;
+  background: #01649f;
   border-radius: 0 0 100% 0;
 }
