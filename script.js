@@ -54,10 +54,6 @@ $(document).on("ready", function(){
     animateRand();
   }
   function gameOver(){
-    // greenButton.css("display", "none");
-    // redButton.css("display", "none");
-    // yellowButton.css("display", "none");
-    // blueButton.css("display", "none");
     TweenMax.to(".gamebutton", 1, {opacity:0,scale: 0, display:"none", ease:Bounce.easeOut});
     greenButton.off("click", animateGreen);
     redButton.off("click", animateRed);
