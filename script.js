@@ -63,7 +63,12 @@ $(document).on("ready", function(){
     redButton.off("click", animateRed);
     yellowButton.off("click", animateYellow);
     blueButton.off("click", animateBlue);
-    alert("You finished " + score + " rounds.");
+    if (highScore < score){
+      highScore = score;
+    }
+    setTimeout(function() {
+    alert("You finished " + score + " rounds. Your High Score is " + highScore + " rounds.");
+  }, 1100);
   }
   function passOrFail(){
     //console.log("PASSORFAIL");
