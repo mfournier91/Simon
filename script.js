@@ -99,6 +99,7 @@ $(document).on("ready", function(){
     }
   }
 
+  TweenMax.staggerFrom(".splitText", .8, {opacity:0, rotation:-180, y:-100, ease:Back.easeOut}, .08)
   nextRound();
   //var roundOver = false;
   //function for evaluating if user clicked correct div
