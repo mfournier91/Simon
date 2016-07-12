@@ -1,6 +1,6 @@
 $(document).on("ready", function(){
   var score = 0;
-  var highScore = 0;
+  var highScore = localStorage.getItem("highScore");
   var lightOrder = []; //Array that stores random numbers representing the colors the user needs to remember
   var newColor;  //The color that is involved in the animation
   var oldColor;
@@ -73,6 +73,7 @@ $(document).on("ready", function(){
     var message = "";
     if (highScore < score && score != 0){
       highScore = score;
+      localStorage.setItem("highScore", highScore);
       message = "YOU BEAT YOUR HIGH SCORE!"
       var song = new Audio("audio/weAreTheChampions.mp3");
       song.play();
