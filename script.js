@@ -71,9 +71,11 @@ $(document).on("ready", function(){
     yellowButton.off("click", animateYellow);
     blueButton.off("click", animateBlue);
     var message = "";
-    if (highScore < score){
+    if (highScore < score && score != 0){
       highScore = score;
-      message = "You beat your High Score!"
+      message = "YOU BEAT YOUR HIGH SCORE!"
+      var song = new Audio("audio/weAreTheChampions.mp3");
+      song.play();
     }
     setTimeout(function() {
     alert("You finished " + score + " rounds. Your High Score is " + highScore + " rounds. " + message);
