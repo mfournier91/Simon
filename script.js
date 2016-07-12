@@ -40,9 +40,7 @@ $(document).on("ready", function(){
       }
       TweenMax.to(animationObject, 0.3, {backgroundColor:newColor, ease: Power0.easeNone});
       audio.play();
-      console.log("Start random animation");
       TweenMax.to(animationObject, 0.3, {backgroundColor:oldColor, ease: Power0.easeNone, delay:.4});
-      console.log("End random animation");
     }, (1400+n*500));
   }
 
@@ -72,13 +70,11 @@ $(document).on("ready", function(){
     //console.log(choiceNum);
     if (answers[choiceNum - 1] == true){
       if (choiceNum == lightOrder.length){
-        console.log("Do next round");
 
         setTimeout(nextRound, 1500);
       }
     }
     else if (answers[choiceNum - 1] == false) {
-      console.log("Game Over.");
       gameOver();
     }
   }
@@ -106,40 +102,36 @@ $(document).on("ready", function(){
 
   //animation functions call evaluateChoice function
   var animateGreen = function(){
-    console.log("Click animation start");
+    var audio = new Audio("audio/SimonFile0.mp3");
     TweenMax.to(greenButton, 0.3, {backgroundColor:"#00ff57", ease: Power0.easeNone});
-    console.log("Click animation end");
+    audio.play();
     TweenMax.from(greenButton, 0.3, {backgroundColor:"#00ff57", ease: Power0.easeNone, delay:.4});
     answers.push(evaluateChoice(0));
-    console.log(answers);
     passOrFail();
 
   }
   var animateRed = function(){
-    console.log("Click animation start");
+    var audio = new Audio("audio/SimonFile1.mp3");
     TweenMax.to(redButton, 0.3, {backgroundColor:"#ff000a", ease: Power0.easeNone});
-    console.log("Click animation end");
+    audio.play()
     TweenMax.from(redButton, 0.3, {backgroundColor:"#ff000a", ease: Power0.easeNone, delay:.4});
     answers.push(evaluateChoice(1));
-    console.log(answers);
     passOrFail();
   }
   var animateYellow = function(){
-    console.log("Click animation start");
+    var audio = new Audio("audio/SimonFile2.mp3");
     TweenMax.to(yellowButton, 0.3, {backgroundColor:"#f2ff01", ease: Power0.easeNone});
-    console.log("Click animation end");
+    audio.play();
     TweenMax.from(yellowButton, 0.3, {backgroundColor:"#f2ff01", ease: Power0.easeNone, delay:.4});
     answers.push(evaluateChoice(2));
-    console.log(answers);
     passOrFail();
   }
   var animateBlue = function(){
-    console.log("Click animation start");
+    var audio = new Audio("audio/SimonFile3.mp3");
     TweenMax.to(blueButton, 0.3, {backgroundColor:"#0164ff", ease: Power0.easeNone});
-    console.log("Click animation end");
+    audio.play()
     TweenMax.from(blueButton, 0.3, {backgroundColor:"#0164ff", ease: Power0.easeNone, delay:.4});
     answers.push(evaluateChoice(3));
-    console.log(answers);
     passOrFail();
   }
 
