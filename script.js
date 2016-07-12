@@ -17,23 +17,29 @@ $(document).on("ready", function(){
   function animate(animationObjectNum, n){
     setTimeout( function(){
       var animationObject = "#color" + animationObjectNum.toString();
+      var audio;
       if(animationObjectNum == 0){
         newColor = "#00ff57";
         oldColor = "#00a157";
+        audio = new Audio("audio/SimonFile0.mp3");
       }
       else if(animationObjectNum == 1){
         newColor = "#ff000a";
         oldColor = "#a8000a";
+        audio = new Audio("audio/SimonFile1.mp3");
       }
       else if(animationObjectNum == 2){
         newColor = "#f2ff01";
         oldColor = "#f2b001";
+        audio = new Audio("audio/SimonFile2.mp3");
       }
       else if(animationObjectNum == 3){
         newColor = "#0164ff";
         oldColor = "#01649f";
+        audio = new Audio("audio/SimonFile3.mp3");
       }
       TweenMax.to(animationObject, 0.3, {backgroundColor:newColor, ease: Power0.easeNone});
+      audio.play();
       console.log("Start random animation");
       TweenMax.to(animationObject, 0.3, {backgroundColor:oldColor, ease: Power0.easeNone, delay:.4});
       console.log("End random animation");
