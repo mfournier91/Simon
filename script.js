@@ -70,11 +70,13 @@ $(document).on("ready", function(){
     redButton.off("click", animateRed);
     yellowButton.off("click", animateYellow);
     blueButton.off("click", animateBlue);
+    var message = "";
     if (highScore < score){
       highScore = score;
+      message = "You beat your High Score!"
     }
     setTimeout(function() {
-    alert("You finished " + score + " rounds. Your High Score is " + highScore + " rounds.");
+    alert("You finished " + score + " rounds. Your High Score is " + highScore + " rounds. " + message);
     var playAgain = confirm("Would you like to play again?")
     console.log(playAgain);
     if (playAgain == true){
