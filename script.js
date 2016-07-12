@@ -1,11 +1,9 @@
 $(document).on("ready", function(){
   var score = 0;
   var highScore = 0;
-  var gameover = false;
   var lightOrder = []; //Array that stores random numbers representing the colors the user needs to remember
   var newColor;  //The color that is involved in the animation
   var oldColor;
-  var divSelection;
   var greenButton = $("#color0");
   var redButton = $("#color1");
   var yellowButton = $("#color2");
@@ -53,6 +51,15 @@ $(document).on("ready", function(){
     }
   }
   function nextRound(){
+    if ($(".gamebutton").css("display")== "none"){ //Checks if playing again after losing
+      score = 0;
+      lightOrder = [];
+      TweenMax.to(".gamebutton", 1, {display:"block", opacity:1, scale:1, ease:Bounce.easeOut});
+      greenButton.on("click", animateGreen);
+      redButton.on("click", animateRed);
+      yellowButton.on("click", animateYellow);
+      blueButton.on("click", animateBlue);
+    }
     choiceNum = 0;
     answers = []; //An array to contain boolean values. True if correct color is clicked.
     animateRand();
@@ -68,7 +75,15 @@ $(document).on("ready", function(){
     }
     setTimeout(function() {
     alert("You finished " + score + " rounds. Your High Score is " + highScore + " rounds.");
+    var playAgain = confirm("Would you like to play again?")
+    console.log(playAgain);
+    if (playAgain == true){
+      console.log($(".gamebutton").css("display"));
+      //reset score, lightOrder, Bring gamebuttons back to visible.
+      nextRound();
+    }
   }, 1100);
+
   }
   function passOrFail(){
     //console.log("PASSORFAIL");
