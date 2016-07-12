@@ -45,7 +45,7 @@ $(document).on("ready", function(){
     for(i=0;i<lightOrder.length;i++){
       console.log("Random Number : " + lightOrder[i], " Array index : "+i);
       animate(lightOrder[i], i);
-    
+
     }
   }
   function nextRound(){
@@ -54,10 +54,11 @@ $(document).on("ready", function(){
     animateRand();
   }
   function gameOver(){
-    greenButton.css("display", "none");
-    redButton.css("display", "none");
-    yellowButton.css("display", "none");
-    blueButton.css("display", "none");
+    // greenButton.css("display", "none");
+    // redButton.css("display", "none");
+    // yellowButton.css("display", "none");
+    // blueButton.css("display", "none");
+    TweenMax.to(".gamebutton", 1, {opacity:0,scale: 0, display:"none", ease:Bounce.easeOut});
     greenButton.off("click", animateGreen);
     redButton.off("click", animateRed);
     yellowButton.off("click", animateYellow);
