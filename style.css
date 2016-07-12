@@ -67,3 +67,6 @@ p{
   background: #01649f;
   border-radius: 0 0 100% 0;
 }
+.splitText {
+  display: inline-block;
+}
