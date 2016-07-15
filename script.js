@@ -45,7 +45,7 @@ $(document).on("ready", function(){
   function animateRand(){
     lightOrder.push(Math.floor(Math.random()*4));
     for(i=0;i<lightOrder.length;i++){
-      console.log("Random Number : " + lightOrder[i], " Array index : "+i);
+      //console.log("Random Number : " + lightOrder[i], " Array index : "+i);
       animate(lightOrder[i], i);
 
     }
