@@ -1,5 +1,6 @@
 $(document).on("ready", function(){
   var score = 0;
+  // nice work using local storage!
   var highScore = localStorage.getItem("highScore");
   var lightOrder = []; //Array that stores random numbers representing the colors the user needs to remember
   var newColor;  //The color that is involved in the animation
@@ -11,11 +12,12 @@ $(document).on("ready", function(){
   var answers = [];
   var choiceNum = 0;
 
-
+// try and stay away from from variables like n, time or time_multiplier might be better here
   function animate(animationObjectNum, n){
     setTimeout( function(){
       var animationObject = "#color" + animationObjectNum.toString();
       var audio;
+      // this is also a duplication of functionality from all your animation methods
       if(animationObjectNum == 0){
         newColor = "#00ff57";
         oldColor = "#00a157";
@@ -55,6 +57,7 @@ $(document).on("ready", function(){
       score = 0;
       lightOrder = [];
       TweenMax.to(".gamebutton", 1, {display:"block", opacity:1, scale:1, ease:Bounce.easeOut});
+      // it would be really sick if we had one event listener and one animation function
       greenButton.on("click", animateGreen);
       redButton.on("click", animateRed);
       yellowButton.on("click", animateYellow);
@@ -79,6 +82,7 @@ $(document).on("ready", function(){
       song.play();
     }
     setTimeout(function() {
+    // :+1:
     alert("You finished " + score + " rounds. Your High Score is " + highScore + " rounds. " + message);
     var playAgain = confirm("Would you like to play again?")
     console.log(playAgain);
@@ -91,6 +95,7 @@ $(document).on("ready", function(){
 
   }
   function passOrFail(){
+    // make sure to leave out any console logs for production code
     //console.log("PASSORFAIL");
     //console.log(choiceNum);
     if (answers[choiceNum - 1] == true){
@@ -106,6 +111,7 @@ $(document).on("ready", function(){
 
   TweenMax.staggerFrom(".splitText", .8, {opacity:0, rotation:-180, y:-100, ease:Back.easeOut}, .08)
   nextRound();
+  // leave out commented code for production
   //var roundOver = false;
   //function for evaluating if user clicked correct div
   var evaluateChoice = function(choice){
@@ -125,7 +131,7 @@ $(document).on("ready", function(){
     }
   }
 
-
+// this seems... a bit wet. How can we take these next 4 function calls and make it 1 instead.
   //animation functions call evaluateChoice function
   var animateGreen = function(){
     var audio = new Audio("audio/SimonFile0.mp3");
